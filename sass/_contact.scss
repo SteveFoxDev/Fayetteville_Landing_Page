@@ -1,0 +1,47 @@
+@use './base' as *;
+
+.contact {
+  grid-row: 7 / 8;
+  grid-column: full-start / full-end;
+  background-color: $color-dk-green;
+  padding: 6rem 0;
+  background-color: $color-dk-green;
+  color: $color-cream;
+  display: grid;
+  grid-template-rows: repeat(2, minmax(min-content, 1fr));
+  justify-content: center;
+  justify-items: center;
+  align-items: start;
+  gap: 2rem;
+
+  &__list {
+    padding-bottom: 2rem;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    & > li {
+      transition: all 0.2s;
+      padding: 0 2rem;
+      & > a,
+      & > a:link,
+      & > a:visited {
+        text-decoration: none;
+        color: currentColor;
+        cursor: pointer;
+      }
+      @media (hover: hover) {
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    font-weight: 300;
+    padding: 0 3rem;
+    text-align: center;
+  }
+}

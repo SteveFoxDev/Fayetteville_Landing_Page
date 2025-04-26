@@ -1,0 +1,49 @@
+@use './base' as *;
+
+.navbar {
+  grid-row: 1 / span 1;
+  grid-column: full-start / full-end;
+  grid-row: 1 / 2;
+
+  height: 6rem;
+  background-color: $color-dk-green;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 2rem;
+    @media only screen and (max-width: $bp-md) {
+      display: none;
+    }
+
+    & > a,
+    & > a:link,
+    & > a:visited {
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    &--item {
+      margin: 0 2rem;
+      padding: 1.5rem 0;
+      color: $color-cream;
+      font-size: 2rem;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      transition: all 0.2s;
+
+      @media (hover: hover) {
+        &:hover {
+          border-bottom: 3px solid $color-lt-orange;
+        }
+      }
+    }
+  }
+}

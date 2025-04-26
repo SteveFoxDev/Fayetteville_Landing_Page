@@ -1,0 +1,119 @@
+@use './base' as *;
+
+.sidenav {
+  --bar-width: 5rem;
+  --bar-height: 4px;
+  --hamburger-gap: 1rem;
+  --hamburger-margin: 1rem;
+  --animation-timing: 0.5s ease-in-out;
+  --hamburger-height: calc(
+    (3 * var(--bar-height)) + (2 * var(--hamburger-gap))
+  );
+  display: none;
+
+  @media only screen and (max-width: $bp-md) {
+    display: block;
+  }
+}
+
+.hamburger-menu {
+  --x-width: calc(
+    var(--hamburger-height) * 1.41421356237
+  ); //multiply the hamb-height by the square root of 2 to get the length
+  display: flex;
+  flex-direction: column;
+  gap: var(--hamburger-gap);
+  position: absolute;
+  top: var(--hamburger-margin);
+  right: var(--hamburger-margin);
+  cursor: pointer;
+  z-index: 1;
+
+  &::before,
+  &::after,
+  &__input {
+    content: '';
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: $color-cream;
+    transform-origin: center;
+    transition: all var(--animation-timing);
+  }
+
+  &__input {
+    appearance: none;
+    pointer-events: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    &:checked {
+      opacity: 0;
+      width: 0;
+    }
+  }
+
+  &:has(input:checked)::before {
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--hamburger-height) * 0.5 - var(--bar-height) / 2); //rotates on center, offset by half the height of bar
+  }
+  &:has(input:checked)::after {
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--hamburger-height) * -0.5 + var(--bar-height) / 2);
+  }
+}
+
+.hamburger-menu:has(input:checked) + .sidebar {
+  visibility: visible;
+  translate: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar {
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  translate: 100%;
+
+  color: $color-cream;
+  background-color: $color-dk-green;
+  height: 100vh;
+  width: 100%;
+  // display will be set to flex
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &__list {
+    list-style: none;
+    margin-right: 2rem;
+
+    & > a,
+    & > a:link,
+    & > a:visited {
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    &--item {
+      margin: 2rem 2rem;
+      padding: 1.5rem 0;
+      color: $color-cream;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      transition: all 0.2s;
+      font-size: 4rem;
+      font-weight: 300;
+
+      @media (hover: hover) {
+        &:hover {
+          border-bottom: 3px solid $color-lt-orange;
+        }
+      }
+    }
+  }
+}

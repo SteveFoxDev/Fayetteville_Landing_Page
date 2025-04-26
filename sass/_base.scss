@@ -1,0 +1,59 @@
+//Color Variables
+$color-lt-green: #606c38;
+$color-dk-green: #283618;
+$color-cream: #fefae0;
+$color-lt-orange: #dda15e;
+$color-dk-orange: #bc6c25;
+$color-brown: #544632;
+$color-blue: #007799;
+
+$darkened-dk-orange: darken($color-dk-orange, 10%);
+$lightened-dk-orange: lighten($color-dk-orange, 10%);
+
+$darkened-blue: darken($color-blue, 10%);
+$darkened-lt-green: darken($color-lt-green, 10%);
+
+//Media Query Breakpoints
+$bp-xl: 75em; //1200px / 16px = 75
+$bp-lg: 56.25em; //900px / 16px = 56.25
+$bp-md: 43.75em; //700 / 16 = 43.75
+$bp-sm: 37.5em; //600 / 16 = 37.5
+$bp-xs: 31.25em; //500 / 16 = 31.25
+//CSS Reset
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: inherit;
+  font-size: 62.5%; //Set 1rem to 10px, (16px * 62.5% = 10px)
+  @media only screen and (max-width: $bp-xl) {
+    font-size: 50%; //Set 1rem to 8px, font size is set to 2rem so it will be a normal 16px below 1200px screen
+  }
+}
+
+body {
+  font-size: 2rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 2rem;
+  background: $color-cream;
+}
+//container class on body element
+.container {
+  display: grid;
+  // grid-template-rows: 6rem calc(100vh - 6rem) 35vw repeat(3, min-content);
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr)
+    [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    ) [center-end] minmax(6rem, 1fr)
+    [full-end];
+  grid-auto-rows: min-content;
+}

@@ -1,0 +1,88 @@
+@use './base' as *;
+
+.btn {
+  &,
+  &:link,
+  &:visited {
+    border: none;
+    border-radius: 0;
+    text-decoration: none;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 1.5rem 3rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+  &:active {
+    transform: translateY(2px);
+    box-shadow: 0 1rem 3rem rgba(#000, 0.2);
+  }
+
+  &-green {
+    background-color: $color-lt-green;
+    color: white;
+    @media (hover: hover) {
+      &:hover {
+        background-color: $color-dk-green;
+      }
+    }
+  }
+  &-orange {
+    background-color: $lightened-dk-orange;
+    color: white;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $color-dk-orange;
+      }
+    }
+  }
+}
+
+.link {
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    background-color: transparent;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 1rem;
+  }
+
+  &-white {
+    color: $color-cream;
+    border-bottom: 2px solid currentColor;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+  &:active {
+    transform: translateY(2px);
+  }
+
+  &__btn-white {
+    color: $color-cream;
+    border: 2px solid $color-cream;
+    transition: all 0.2s;
+    @media (hover: hover){
+      &:hover {
+        transform: translateY(-3px);
+        background-color: $color-cream;
+        color: $color-dk-green;
+        border: 2px solid transparent;
+      }
+    }
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+}

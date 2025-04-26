@@ -1,0 +1,65 @@
+@use './base' as *;
+
+.activities,
+.activities-left,
+.activities-right {
+    padding: 6rem 0;
+    background-color: $color-dk-orange;
+}
+
+.activities-left {
+    grid-row: 4 / span 1;
+    grid-column: full-start / span 1;
+}
+.activities-right {
+    grid-row: 4 / span 1;
+    grid-column: center-end / full-end;
+}
+
+.activities {
+    grid-row: 4 / span 1;
+    grid-column: center-start / center-end;
+
+    display: grid;
+    grid-template-rows: min-content 1fr;
+
+    &__heading {
+        justify-self: center;
+        padding: 2rem;
+        color: $color-cream;
+        border-bottom: 1px solid currentColor;
+    }
+}
+
+.tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 6rem;
+    margin-top: 3rem;
+}
+
+.tile {
+    color: $color-cream;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    row-gap: 1.5rem;
+    column-gap: 2rem;
+
+    &__heading {
+        font-weight: 300;
+    }
+
+    &__icon {
+        width: 4.5rem;
+        height: 4.5rem;
+
+        grid-row: 1 / span 2;
+        grid-column: 1 / 2;
+
+        & > img {
+            width: 100%;
+            display: block;
+        }
+    }
+
+}

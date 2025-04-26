@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Fayetteville</title>
+</head>
+
+<body class="container">
+    
+    <!-- <<< -------------------- Navbar -------------------- >>> -->
+    <nav class="navbar">
+        <!-- <<< -------------------- SideNav -------------------- >>> -->
+     <div class="sidenav">
+        <label for="hamburger" class="hamburger-menu">
+            <input type="checkbox" id="hamburger" class="hamburger-menu__input">
+        </label>
+
+        <aside class="sidebar">
+            <ul class="sidebar__list">
+                <a href="#about">
+                <li class="sidebar__list--item">About</li></a>
+                <a href="#activities">
+                <li class="sidebar__list--item">Activities</li></a>
+                <a href="#lodging">
+                <li class="sidebar__list--item">Lodging</li></a>
+                <a href="#restaraunts">
+                <li class="sidebar__list--item">Restaraunts</li></a>
+                <a href="#contact">
+                <li class="sidebar__list--item">Contact</li></a>
+            </ul>
+        </aside>
+     </div>
+     <!-- <<< -------------------- TOP NAV -------------------- >>> -->
+        <ul class="navbar__list">
+            <a href="#about">
+            <li class="navbar__list--item">About</li></a>
+            <a href="#activities">
+            <li class="navbar__list--item">Activities</li></a>
+            <a href="#lodging">
+            <li class="navbar__list--item">Lodging</li></a>
+            <a href="#restaraunts">
+            <li class="navbar__list--item">Restaraunts</li></a>
+            <a href="#contact">
+            <li class="navbar__list--item">Contact</li></a>
+        </ul>
+    </nav>
+    <!-- <<< -------------------- HEADER -------------------- >>> -->
+    <header class="header">
+        <h1 class="heading-1">Fayetteville</h1>
+        <button class="btn btn-orange header__btn">Visit Fayetteville &rarr;</button>
+    </header>
+    <!-- <<< -------------------- About -------------------- >>> -->
+    <div id="about" class="about">
+        <h2 class="heading-2 about__heading">Adventure Awaits</h2>
+        <div class="about__info">
+            <div class="about__info--text">
+                <h3 class="heading-3">Where Adventure Meets Small-Town Charm</h3>
+                <p class="">Discover the thrill of outdoor adventures in Fayetteville, West Virginia, where
+                    heart-pounding experiences are just steps away. And when the day’s excitement winds down, welcome
+                    the warm embrace of our small town with a vibrant shopping district, thriving food scene and
+                    charming accommodations.</p>
+                <a class="link link__btn-white" href="">Plan Your Trip &rarr;</a>
+            </div>
+            <div class="about__info--images">
+                <!-- Photo by <a href="https://unsplash.com/@stevewrz?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Steve Wrzeszczynski</a> on <a href="https://unsplash.com/photos/a-train-bridge-over-a-forest-E2G4UGt9FII?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> -->
+                <img src="/img/bridgeside.jpg" alt="image of new river bridge"
+                    class="about__info--images-1 about__info--images-img">
+                <img src="/img/rafting.jpg" alt="image of rafters in the river"
+                    class="about__info--images-2 about__info--images-img">
+                <img src="/img/baseJumper.jpg" alt="image of base jumper"
+                    class="about__info--images-3 about__info--images-img">
+            </div>
+        </div>
+    </div>
+    <!-- <<< -------------------- Activities -------------------- >>> -->
+    <div id="activities" class="activities-left"></div>
+    <div class="activities">
+        <h2 class="heading-2 activities__heading">Activities</h2>
+        <div class="tiles">
+            <div class="tile">
+                <div class="tile__icon"><img src="img/monument.svg" alt=""></div>
+                <h3 class="heading-3 tile__heading">Historical Sites</h3>
+                <p class="tile__text">Discover Fayetteville's rich historical background, including its Civil War and Coal Mining history.</p>
+            </div>
+            <div class="tile">
+                <div class="tile__icon"><img src="img/oars.svg" alt=""></div>
+                <h3 class="heading-3 tile__heading">Rafting</h3>
+                <p class="tile__text">The New River runs right through Fayetteville. Go whitewater rafting with our experienced raft guides!</p>
+            </div>
+            <div class="tile">
+                <div class="tile__icon"><img src="img/man-in-hike.svg" alt=""></div>
+                <h3 class="heading-3 tile__heading">Hiking</h3>
+                <p class="tile__text">You will never run out of trails in the New River Gorge National Park and Preserve. </p>
+            </div>
+            <div class="tile">
+                <div class="tile__icon"><img src="img/bicycle.svg" alt=""></div>
+                <h3 class="heading-3 tile__heading">Biking</h3>
+                <p class="tile__text">Fayetteville is home to many hiking/biking trails.  Get with out friends at Arrowhead Bike Farm and start cycling!</p>
+            </div>
+            <div class="tile">
+                <div class="tile__icon"><img src="img/kayak.svg" alt=""></div>
+                <h3 class="heading-3 tile__heading">Kayaking</h3>
+                <p class="tile__text">Want to challenge your kayaking skills, or do you want to just float along? We have all the good spots!</p>
+            </div>
+            <div class="tile">
+                <div class="tile__icon"><img src="img/swimming.svg" alt=""></div>
+                <h3 class="heading-3 tile__heading">Swimming</h3>
+                <p class="tile__text">You can take a dip in the river, or try out Ace Adventure Waterpark for a one of a kind experience!</p>
+            </div>
+        </div>
+    </div>
+    <div class="activities-right"></div>
+    <!-- <<< -------------------- Lodging -------------------- >>> -->
+    <div id="lodging" class="lodging">
+        <h2 class="heading-2 lodging__heading">Lodging</h2>
+        <!-- <<< ----- Card 1 ----- >>> -->
+        <div class="cards">
+            <div class="card">
+                <div class="card__face card__face--front card__face--front-1">
+                    <img class="card__face--front-img" src="img/airbnb.png" alt="airbnb rental">
+                    <h3 class="heading-3 card__face--front-heading">Airbnb Rentals</h3>
+                    <span class="card__face--front-flip">&#8690;</span>
+                </div>
+                <div class="card__face card__face--back card__face--back-1">
+                    <ul class="card__face--back-list">
+                        <li>100's of rentals</li>
+                        <li>Single-Family</li>
+                        <li>Tiny House</li>
+                        <li>Multi-Family</li>
+                        <li>Cabins</li>
+                    </ul>
+                    <a href="https://airbnb.com/s/Fayetteville-WV" target="_blank" class="link link-white">View Rentals
+                        &rarr;</a>
+                </div>
+            </div>
+
+            <!-- <<< ----- Card 2 ----- >>> -->
+            <div class="card">
+                <div class="card__face card__face--front card__face--front-2">
+                    <img class="card__face--front-img" src="img/lafayette.png" alt="hotel room">
+                    <h3 class="heading-3 card__face--front-heading">LaFayette Flats</h3>
+                    <span class="card__face--front-flip">&#8690;</span>
+                </div>
+                <div class="card__face card__face--back card__face--back-2">
+                    <ul class="card__face--back-list">
+                        <li>4 Suites</li>
+                        <li>Historical Building</li>
+                        <li>Downtown</li>
+                        <li>Full Kitchen</li>
+                        <li>Walk to attractions</li>
+                    </ul>
+                    <a href="https://lafayetteflats.com/" target="_blank" class="link link-white">View Rentals
+                        &rarr;</a>
+                </div>
+            </div>
+            <!-- <<< ----- Card 3 ----- >>> -->
+            <div class="card">
+                <div class="card__face card__face--front card__face--front-3">
+                    <img class="card__face--front-img" src="img/bear.png" alt="cabin">
+                    <h3 class="heading-3 card__face--front-heading">Bear Mtn Cabins</h3>
+                    <span class="card__face--front-flip">&#8690;</span>
+                </div>
+                <div class="card__face card__face--back card__face--back-3">
+                    <ul class="card__face--back-list">
+                        <li>Open Year Round</li>
+                        <li>2-person cabin</li>
+                        <li>Large family cabins</li>
+                        <li>Centrally Located</li>
+                        <li>RV/Tent Sites</li>
+                    </ul>
+                    <a href="https://bearmountaincamping.com/" target="_blank" class="link link-white">View Rentals
+                        &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <<< -------------------- Restaraunts -------------------- >>> -->
+    <div class="restaraunts-left"></div>
+    <div id="restaraunts" class="restaraunts">
+        <h2 class="heading-2 restaraunts__heading">Restaraunts</h2>
+        <h3 class="heading-3 restaraunts__sub-heading">Looking for a quick bite to eat, or place to sit down and enjoy
+            local craft beers with friends? Fayetteville has it all!</h3>
+        <div class="food">
+            <div class="food-tile">
+                <h4 class="heading-4 food-tile__heading">Secret Sandwich Society</h4>
+                <a href="tel:(304) 574-4777" class="food-tile__phone"><i class="fa fa-phone"></i> (304) 574-4777</a>
+                <a href="https://www.secretsandwichsociety.com/" class="food-tile__link" target="_blank">Visit Website <i
+                        class="fa fa-external-link"></i></a>
+            </div>
+            <div class="food-tile">
+                <h4 class="heading-4 food-tile__heading">Cathedral Cafe</h4>
+                <a href="tel:(304) 574-0202" class="food-tile__phone"><i class="fa fa-phone"></i> (304) 574-0202</a>
+                <a href="https://www.thecathedralcafe.com/" class="food-tile__link" target="_blank">Visit Website <i
+                        class="fa fa-external-link"></i></a>
+            </div>
+            <div class="food-tile">
+                <h4 class="heading-4 food-tile__heading">Pies & Pints Pizzeria</h4>
+                <a href="tel:(304) 574-2200" class="food-tile__phone"><i class="fa fa-phone"></i> (304) 574-2200</a>
+                <a href="https://piesandpints.net/" class="food-tile__link" target="_blank">Visit Website <i
+                        class="fa fa-external-link"></i></a>
+            </div>
+            <div class="food-tile">
+                <h4 class="heading-4 food-tile__heading">Wood Iron Eatery</h4>
+                <a href="tel:(304) 900-5210" class="food-tile__phone"><i class="fa fa-phone"></i> (304) 900-5210</a>
+                <a href="https://www.woodironeatery.com/" class="food-tile__link" target="_blank">Visit Website <i
+                        class="fa fa-external-link"></i></a>
+            </div>
+            <div class="food-tile">
+                <h4 class="heading-4 food-tile__heading">Southside Junction Tap House</h4>
+                <a href="tel:(304) 574-2222" class="food-tile__phone"><i class="fa fa-phone"></i> (304) 574-2222</a>
+                <a href="https://thesouthsidejunctiontaphouse.com/" class="food-tile__link" target="_blank">Visit Website <i
+                        class="fa fa-external-link"></i></a>
+            </div>
+            <div class="food-tile">
+                <h4 class="heading-4 food-tile__heading">Elliot's Whitewater Bar & Grill</h4>
+                <a href="tel:(304) 574-0789" class="food-tile__phone"><i class="fa fa-phone"></i> (304) 574-0789</a>
+                <a href="https://elliottswv.com/" class="food-tile__link" target="_blank"></i>Visit Website <i
+                        class="fa fa-external-link"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="restaraunts-right"></div>
+    <!-- <<< -------------------- Contact -------------------- >>> -->
+    <div id="contact" class="contact">
+        <ul class="contact__list">
+            <li><a href="#">Email Us</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Become an Ambassador</a></li>
+        </ul>
+        <div class="contact__copyright">
+            <p>This site is a mock landing page, it is NOT the official landing page for Fayetteville, WV tourism.</p>
+            <p>Copyright &copy; by Steve Fox.</p>
+             
+        </div>
+     </div>
+</body>
+<script src="/scripts/closeNav.js"></script>
+</html>

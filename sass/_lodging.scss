@@ -1,0 +1,114 @@
+@use './base' as *;
+
+@mixin bg-gradient($color-1, $color-2) {
+  background-image: linear-gradient(to bottom right, $color-1, $color-2);
+}
+
+.lodging {
+  grid-row: 5 / 6;
+  grid-column: center-start / center-end;
+  padding: 6rem 0;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+
+  &__heading {
+    justify-self: center;
+    padding: 2rem;
+    color: $color-brown;
+    border-bottom: 1px solid currentColor;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 34rem;
+
+  &__face {
+    height: 34rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 1rem 3rem rgba(#000, 0.5);
+    backface-visibility: hidden;
+    transition: all 0.8s ease;
+
+    &--front {
+      display: grid;
+      grid-template-rows: 28rem min-content;
+      justify-items: center;
+      align-items: center;
+      color: $color-cream;
+
+      &-img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      &-heading {
+        padding: 1.7rem;
+        position: relative;
+      }
+
+      &-flip {
+        position: absolute;
+        bottom: 6px;
+        right: 3px;
+        font-size: 3rem;
+      }
+      &-1 {
+        @include bg-gradient($lightened-dk-orange, $color-dk-orange);
+      }
+      &-2 {
+        @include bg-gradient($color-blue, $darkened-blue);
+      }
+      &-3 {
+        @include bg-gradient($color-lt-green, $darkened-lt-green);
+      }
+    }
+
+    &--back {
+      transform: rotateY(-180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      color: $color-cream;
+      &-1 {
+        @include bg-gradient($lightened-dk-orange, $color-dk-orange);
+      }
+      &-2 {
+        @include bg-gradient($color-blue, $darkened-blue);
+      }
+      &-3 {
+        @include bg-gradient($color-lt-green, $darkened-lt-green);
+      }
+
+      &-list {
+        list-style: none;
+        & > li {
+          padding: 1rem;
+          border-bottom: 1px solid $color-cream;
+        }
+      }
+    }
+  }
+
+    &:hover &__face--front {
+      transform: rotateY(180deg);
+    }
+    &:hover &__face--back {
+      transform: rotateY(0);
+    }
+}

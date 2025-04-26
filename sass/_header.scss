@@ -1,0 +1,27 @@
+@use './base' as *;
+
+.header {
+    height: calc(100vh - 6rem);
+    grid-row: 2 / span 1;
+    grid-column: full-start / full-end;
+    grid-row: 2 / 3;
+
+    background-image: url(/img/bridge.jpg);
+    background-size: cover;
+    background-position: 50% 25%;
+    padding: 10rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__btn {
+        @media only screen and (max-width: $bp-sm) {
+            font-size: 1.8rem;
+          }
+          @media only screen and (max-width: $bp-xs) {
+            font-size: 1.6rem;
+          }
+    }
+}

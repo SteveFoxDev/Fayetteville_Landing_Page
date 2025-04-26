@@ -1,0 +1,42 @@
+@use './base' as *;
+
+.heading-1 {
+   font-size: 12rem;
+   font-weight: 900;
+   text-transform: uppercase;
+   text-shadow: 0 .5rem 2rem rgba(#000, .7);
+   letter-spacing: 1rem;
+   color: $color-cream;
+   margin: 5rem;
+   @media only screen and (max-width: $bp-lg) {
+      font-size: 10rem;
+    }
+    @media only screen and (max-width: $bp-md) {
+      font-size: 8rem;
+    }
+    @media only screen and (max-width: $bp-sm) {
+      font-size: 6rem;
+    }
+    @media only screen and (max-width: $bp-xs) {
+      letter-spacing: normal;
+    }
+}
+
+.heading-2 {
+   font-size: 4rem;
+   text-transform: uppercase;
+    @media only screen and (max-width: $bp-sm) {
+      font-size: 3rem;
+    }
+}
+
+.heading-3 {
+   font-size: 2rem;
+   text-transform: uppercase;
+}
+
+.heading-4 {
+   font-size: 1.8rem;
+   font-weight: 600;
+   text-transform: uppercase;
+}
